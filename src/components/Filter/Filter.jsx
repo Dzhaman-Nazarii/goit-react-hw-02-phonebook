@@ -1,4 +1,5 @@
-import {Component} from 'react'
+import { Component } from 'react'
+import PropTypes from 'prop-types';
 
 export default class Filter extends Component {
 
@@ -8,7 +9,14 @@ export default class Filter extends Component {
 
   render() {
     return (
-      <input name='search' placeholder='Search...'onChange={this.handleSearch}></input>
+      <label>
+        Find contact by name
+      <input name='search' placeholder='Search...' onChange={this.handleSearch}></input>
+    </label>
     )
   }
+}
+
+Filter.propTypes = {
+    onChange: PropTypes.func.isRequired,
 }
