@@ -46,9 +46,8 @@ export default class App extends Component {
   };
 
   getContactsBySearch = () => {
-    const normalizedSearch = this.state.filter.toLowerCase();
     const filteredItems = this.state.contacts.filter((contact) =>
-      contact.name.toLowerCase().includes(normalizedSearch)
+      contact.name.includes(this.state.filter)
     );
     return filteredItems;
   };
