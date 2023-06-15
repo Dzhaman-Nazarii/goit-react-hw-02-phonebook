@@ -16,7 +16,7 @@ export default class App extends Component {
   
   addContact = (data) => {
     const { contacts } = this.state;
-    const existingContact = contacts.find((contact) => contact.name === data.name);
+    const existingContact = contacts.find((contact) => contact.name.toLowerCase() === data.name.toLowerCase());
     
     if (existingContact) {
       alert('A contact with this name already exists!');
